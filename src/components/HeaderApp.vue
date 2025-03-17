@@ -28,27 +28,27 @@ export default {
             </div>
             <div class="col-10 d-flex justify-content-end align-items-center">
                 <div class="mx-2">
-                    <a href="home" class="text-decoration-none text-white">
-                        HOME
+                    <a href="#" class="text-decoration-none text-white">
+                        Home
                     </a>
                 </div>
                 <div class="mx-2">
-                    <a href="home" class="text-decoration-none text-white">
+                    <a href="#second-main" class="text-decoration-none text-white">
                         Competenze Tecniche
                     </a>
                 </div>
                 <div class="mx-2">
-                    <a href="home" class="text-decoration-none text-white">
+                    <a href="#third-main" class="text-decoration-none text-white">
                         Progetti
                     </a>
                 </div>
                 <div class="mx-2">
-                    <a href="home" class="text-decoration-none text-white">
+                    <a href="#quarter-main" class="text-decoration-none text-white">
                         Chi sono
                     </a>
                 </div>
                 <div class="mx-2" >
-                    <a href="home" class="text-decoration-none text-white">
+                    <a href="#fifth-main" class="text-decoration-none text-white">
                         Contatti
                     </a>
                 </div>

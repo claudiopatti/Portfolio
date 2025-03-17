@@ -16,7 +16,7 @@ export default {
 
 <template>
 
-<div class="container First-main pt-5">
+<div class="container mt-5 First-main pt-5">
     <div class="row">
         <div class="col-6 text-white">
             <h1>Claudio Patti</h1>
@@ -29,10 +29,10 @@ export default {
     </div>
 </div>
 
-<div class="container Second-main">
+<div class="container pt-5 Second-main" id="second-main">
     <div class="row">
         <div class="col column-Skills">
-            <h2 class="py-4">Skills</h2>
+            <h2 class="py-4">Competenze Tecniche</h2>
 
             <div class="row pb-4">
                 <div class="col-4" v-for="skill in store.skills" :key="skill.id">
@@ -45,23 +45,20 @@ export default {
     </div>
 </div>
 
-<div class="container Third-main">
+<div class="container pt-5 Third-main" id="third-main">
     <div class="row">
         <div class="col column-Skills">
             <h2 class="py-4">Progetti</h2>
 
             <div class="row pb-4">
-                <div class="col-4" v-for="skill in store.skills" :key="skill.id">
-                    {{ skill.name }}
-                    <span v-html="skill.icon"></span>
-                </div>
+                
             </div>
 
         </div>
     </div>
 </div>
 
-<div class="container Quarter-main">
+<div class="container pt-5 Quarter-main" id="quarter-main">
     <div class="row">
         <div class="col column-Skills">
             <h2 class="py-4">Chi sono</h2>
@@ -76,7 +73,7 @@ export default {
     </div>
 </div>
 
-<div class="container Fifth-main ">
+<div class="container pt-5 Fifth-main " id="fifth-main">
 
     <div class="row ">
         <div class="col column-Skills  ">
@@ -92,10 +89,10 @@ export default {
                     <i class="fa-solid fa-envelope pt-1 pe-2"></i> Email: claudiopatti1997@gmail.com
                 </p>
                 <p class="d-flex justify-content-center">
-                    <i class="fa-brands fa-github pt-1 pe-2"></i> Github: <a href="https://github.com/claudiopatti" class="text-decoration-none">Claudio Patti</a>
+                    <i class="fa-brands fa-github pt-1 pe-2"></i> Github:&nbsp; <a href="https://github.com/claudiopatti" class="text-decoration-none">Claudio Patti</a>
                 </p>
                 <p class="d-flex justify-content-center">
-                    <i class="fa-brands fa-linkedin pt-1 pe-2"></i> Linkedin: <a href="https://www.linkedin.com/in/claudio-patti1997/" class="text-decoration-none">Claudio Patti</a>
+                    <i class="fa-brands fa-linkedin pt-1 pe-2"></i> Linkedin:&nbsp; <a href="https://www.linkedin.com/in/claudio-patti1997/" class="text-decoration-none">Claudio Patti</a>
                 </p>
             </div>
 
