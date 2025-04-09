@@ -6,10 +6,16 @@ export default {
     data() {
         return {
             store,
+            change_skill: true,
         }
     },
     methods: {
-        
+        changeSkillBack () {
+            this.change_skill = true;
+        },
+        changeSkillFront () {
+            this.change_skill = false;
+        }
     }
 }
 </script>
@@ -32,22 +38,81 @@ export default {
 <div class="container pt-5 Second-main" id="second-main">
     <div class="row">
         <div class="col column-Skills">
-            <h2 class="py-4">Competenze Tecniche</h2>
 
-            <div class="row pb-4">
-                <div class="col-4" v-for="skill in store.skills" :key="skill.id">
-                    {{ skill.name }}
-                    <span v-html="skill.icon"></span>
+            <h1 class="text-center fs-1 py-2">Competenze </h1>
+            <div class="row">
+                <div @click="changeSkillFront()" class="col-6">
+
+                    <h2 v-if="this.change_skill == true" class="text-center fs-1 pt-2">Competenze Front-End</h2>
+                    <h2 v-else-if="this.change_skill == false" class="text-center fs-1 button-skill-click">Competenze Front-End</h2>
+
+
+                </div>
+
+                <div @click="changeSkillBack()" class="col-6">
+
+                    <h2 v-if="this.change_skill == false" class="text-center fs-1 pt-2">Competenze Back-End</h2>
+                    <h2 v-else-if="this.change_skill == true" class="text-center fs-1 button-skill-click">Competenze Back-End</h2>
+                    
                 </div>
             </div>
 
+            <div v-if="this.change_skill == false" class="row">
+
+                <div class="col p-0">
+
+                    <h3 class="title-skill">Front-End</h3>
+
+                    <div class="container-name-skill">
+                        <div  v-for="skill in store.skills" :key="skill.id">
+                            <div v-if="skill.side == 'Front-end'" class="pb-2">
+                                {{ skill.name }}
+                                <span v-html="skill.icon"></span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div v-else-if="this.change_skill == true" class="row" >
+                <div class="col-6">
+                    
+                    <h3 class="title-skill skill-back">Back-End</h3>
+
+                    <div class="container-name-skill">
+                        <div class="" v-for="skill in store.skills" :key="skill.id">
+                            <div v-if="skill.side == 'Back-end'" class="pb-2">
+                                {{ skill.name }}
+                                <span v-html="skill.icon"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+
+                    <h3 class="title-skill">Database</h3>
+
+                    <div class="container-name-skill">
+                        <div class="" v-for="skill in store.skills" :key="skill.id">
+                            <div v-if="skill.side == 'Database'" class="pb-2">
+                                {{ skill.name }}
+                                <span v-html="skill.icon"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </div>
 
 <div class="container pt-5 Third-main" id="third-main">
     <div class="row">
-        <div class="col column-Skills">
+        <div class="col column-project">
             <h2 class="py-4">Progetti</h2>
 
             <div class="row pb-4">
@@ -60,7 +125,7 @@ export default {
 
 <div class="container pt-5 Quarter-main" id="quarter-main">
     <div class="row">
-        <div class="col column-Skills">
+        <div class="col column-about">
             <h2 class="py-4">Chi sono</h2>
 
             <div>
@@ -76,7 +141,7 @@ export default {
 <div class="container pt-5 Fifth-main " id="fifth-main">
 
     <div class="row ">
-        <div class="col column-Skills  ">
+        <div class="col column-contact  ">
             <h1 class="py-4 d-flex justify-content-center">Contatti</h1>
 
             
@@ -109,11 +174,40 @@ export default {
 }
 
 .Second-main, .Third-main, .Quarter-main, .Fifth-main {
-    height: 400px;
+    // height: 400px;
     width: 100%;
+    cursor: pointer;
 
     .column-Skills{
         background-color: #f0f0f0;
+        height: 100%;
+        .col-4 {
+            padding: 0;
+            // height: 100%;
+            & .container-name-skill{
+                height: 100%;
+                padding-left: 10px;
+                padding-top: 10px;
+                background-color: #0a72d5;
+                color: white;
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            & .skill-back{
+                border-left: 0;
+                border-right: 0;
+            }
+        }
+
+        .col-6{
+            padding: 0;
+
+            .button-skill-click {
+                border: 10px solid grey;
+                background-color: #0a72d5;
+            }
+        }
     }
 }
 
@@ -124,4 +218,14 @@ export default {
         color: #0a72d5;
     }
 }
+
+.title-skill {
+    font-size: 40px;
+    background-color: #0a72d5;
+    border: 10px solid grey;
+    margin-bottom: 0;
+    
+}
+
+
 </style>
