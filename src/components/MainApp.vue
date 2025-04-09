@@ -43,16 +43,16 @@ export default {
             <div class="row">
                 <div @click="changeSkillFront()" class="col-6">
 
-                    <h2 v-if="this.change_skill == true" class="text-center fs-1 pt-2">Competenze Front-End</h2>
-                    <h2 v-else-if="this.change_skill == false" class="text-center fs-1 button-skill-click">Competenze Front-End</h2>
+                    <h2 v-if="this.change_skill == true" class="text-center fs-1 pt-2">Front-End</h2>
+                    <h2 v-else-if="this.change_skill == false" class="text-center fs-1 button-skill-click">Front-End</h2>
 
 
                 </div>
 
                 <div @click="changeSkillBack()" class="col-6">
 
-                    <h2 v-if="this.change_skill == false" class="text-center fs-1 pt-2">Competenze Back-End</h2>
-                    <h2 v-else-if="this.change_skill == true" class="text-center fs-1 button-skill-click">Competenze Back-End</h2>
+                    <h2 v-if="this.change_skill == false" class="text-center fs-1 pt-2">Back-End</h2>
+                    <h2 v-else-if="this.change_skill == true" class="text-center fs-1 button-skill-click">Back-End</h2>
                     
                 </div>
             </div>
@@ -61,7 +61,7 @@ export default {
 
                 <div class="col p-0">
 
-                    <h3 class="title-skill">Front-End</h3>
+                    <h3 class="title-skill">Linguaggi e Framework</h3>
 
                     <div class="container-name-skill">
                         <div  v-for="skill in store.skills" :key="skill.id">
@@ -79,7 +79,7 @@ export default {
             <div v-else-if="this.change_skill == true" class="row" >
                 <div class="col-6">
                     
-                    <h3 class="title-skill skill-back">Back-End</h3>
+                    <h3 class="title-skill skill-back">Linguaggi e Framework</h3>
 
                     <div class="container-name-skill">
                         <div class="" v-for="skill in store.skills" :key="skill.id">
@@ -93,7 +93,7 @@ export default {
 
                 <div class="col-6">
 
-                    <h3 class="title-skill">Database</h3>
+                    <h3 class="title-skill">Database & API</h3>
 
                     <div class="container-name-skill">
                         <div class="" v-for="skill in store.skills" :key="skill.id">
@@ -113,9 +113,9 @@ export default {
 <div class="container pt-5 Third-main" id="third-main">
     <div class="row">
         <div class="col column-project">
-            <h2 class="py-4">Progetti</h2>
+            <h2 class="py-4 text-center">Progetti</h2>
 
-            <div class="row pb-4">
+            <div class="row card-project">
                 
             </div>
 
@@ -181,7 +181,7 @@ export default {
     .column-Skills{
         background-color: #f0f0f0;
         height: 100%;
-        .col-4 {
+        .col-6, .col {
             padding: 0;
             // height: 100%;
             & .container-name-skill{
@@ -193,11 +193,6 @@ export default {
                 font-size: 30px;
                 font-weight: bold;
             }
-
-            & .skill-back{
-                border-left: 0;
-                border-right: 0;
-            }
         }
 
         .col-6{
@@ -207,6 +202,18 @@ export default {
                 border: 10px solid grey;
                 background-color: #0a72d5;
             }
+        }
+    }
+
+    .column-project{
+        background-color: #f0f0f0;
+        height: 800px;
+
+        .card-project {
+            width: 1200px;
+            height: 600px;
+            margin: 0px auto;
+            background-color: #0a72d5;
         }
     }
 }
