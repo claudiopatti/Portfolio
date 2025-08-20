@@ -29,6 +29,60 @@
   font-style: italic;
 }
 
+:root {
+    /* --general-color: #AC59CA; */
+    --js: #F0DB4F;
+    --php: #AEB2D5;
+    --vueJs: #41B883;
+    --laravel: #F05340;
+    --bootstrap: #563D7C;
+    --html: #E34C26;
+    --css: #2965F1;
+    --node:  #3C873A;
+    --mysql:  #F29111;
+    --slack:  #F0F0F0;
+  }
+  .JavaScript{
+    color: var(--js) !important;
+  }
+  .PHP{
+    color: var(--php) !important;
+  }
+  .VueJs{
+    color: var(--vueJs) !important;
+  }
+  .Laravel{
+    color: var(--laravel) !important;
+  }
+  .Bootstrap{
+    color: var(--bootstrap) !important;
+  }
+  .Html{
+    color: var(--html) !important;
+  }
+  .CSS{
+    color: var(--css) !important;
+  }
+  .NodeJs{
+    color: var(--node) !important;
+  }
+  .MySql{
+    color: var(--mysql) !important;
+  }
+  .Slack{
+    color: var(--slack) !important;
+  }
+
+.text-title {
+    color: #00B4D8;
+}
+
+
+.pt-sans-bold {
+    color: #005f73;
+}
+
+
 #app {
   height: 100%;
   width: 100%;
